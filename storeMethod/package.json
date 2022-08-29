@@ -1,0 +1,20 @@
+{
+  "name": "lamdas3image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node handler.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.157.0",
+    "@aws-sdk/s3-request-presigner": "^3.157.0",
+    "aws-sdk": "^2.1202.0",
+    "http-status-codes": "^2.2.0",
+    "uuid": "^8.3.2"
+  }
+}

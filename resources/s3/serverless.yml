@@ -1,0 +1,26 @@
+service: s3-bucket-document-storage
+
+frameworkVersion: "3"
+
+projectDir: ../
+
+custom:
+  region: ${file(../../serverless-config.json):region}
+  stage: ${file(../../serverless-config.json):stage}
+  documentStorageBucketName: ${file(../../serverless-config.json):documentStorageBucketName}-${self:custom.stage}
+  documentStorageTemplate: ${file(./buckets/documentStorage.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: ${self:custom.region}
+  stage: ${self:custom.stage}
+
+resources:
+  Resources:
+    documentStorageBucket: ${self:custom.documentStorageTemplate}
+  Outputs:
+    documentStorageBucketArn:
+      Value: !GetAtt documentStorageBucket.Arn
+      Export:
+        Name: documentStorageBucketArn
