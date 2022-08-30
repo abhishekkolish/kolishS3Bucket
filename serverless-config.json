@@ -2,6 +2,6 @@
     "region": "us-east-1",
     "stage": "dev",
     "clientDocumentsTableName": "client_documents",
-    "documentStorageBucketName": "document-storage-bucket"
+    "documentStorageBucketName": "my-storage-bucket"
   }
   

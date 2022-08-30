@@ -1,6 +1,6 @@
-const { PutObjectCommand } = require("@aws.sdk/client-s3");
+const { PutObjectCommand } = require("@aws-sdk/client-s3");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
-
+const { s3Client } = require("./s3Client");
 const componentName = "lamdas3image.s3UploadObject";
 
 const s3UploadObject = async (reqId, fileName, type) => {

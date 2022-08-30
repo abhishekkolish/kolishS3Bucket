@@ -8,7 +8,7 @@ custom:
   region: ${file(../../serverless-config.json):region}
   stage: ${file(../../serverless-config.json):stage}
   documentStorageBucketName: ${file(../../serverless-config.json):documentStorageBucketName}-${self:custom.stage}
-  documentStorageTemplate: ${file(./buckets/documentStorage.yml)}
+  documentStorageTemplate: ${file(./bucket/documentStorage.yml)}
 
 provider:
   name: aws
